@@ -11,8 +11,7 @@ function Copyright() {
         <Typography variant="body2" color="text.secondary">
             {'Copyright © '}
             {new Date().getFullYear()}{' '}
-                Aditya Iyer, Aditi Killedar, Shashank U M, Srinath Srinivasan
-            {'.'}
+            Jinming Xing, Krisha Patel, Shreyas Devaraj
         </Typography>
     );
 }
@@ -34,7 +33,6 @@ export default function Footer() {
                     component="footer"
                     sx={{
                         py: 3,
-                        px: 2,
                         mt: 'auto',
                         backgroundColor: (theme) =>
                             theme.palette.mode === 'light'

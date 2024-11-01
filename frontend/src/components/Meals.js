@@ -152,7 +152,7 @@ export default function Meals(props) {
           My Meals
         </Typography>
       </Container>
-      <Container maxWidth>
+      <Container maxWidth="xl">
         <Box
           sx={{
             display: "grid",

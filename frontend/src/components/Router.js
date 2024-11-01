@@ -10,7 +10,7 @@ import Meals from "./Meals";
 import burnoutReducer, { updateState } from "../burnoutReducer";
 import PrivateRoute from "./PrivateRoute";
 import useToken from "./authentication/useToken";
-import FAQ from "./faq";
+import FAQ from "./Faq";
 import Resources from "./Resources";
 import Calender from "./calender";
 import LandingPage from "./Landing";

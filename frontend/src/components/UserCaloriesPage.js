@@ -276,7 +276,7 @@ const handleUnenroll = (eventName) => {
 
   return (
     <>
-      <Container maxWidth>
+      <Container maxWidth="xl">
         <Box
           sx={{
             display: "grid",

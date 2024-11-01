@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import FAQ from './components/faq';
+import FAQ from './components/Faq';
 
 test('renders the landing page', () => {
   render(<FAQ />);
