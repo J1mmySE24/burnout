@@ -18,6 +18,7 @@ import useToken from "./useToken";
 import { useHistory } from "react-router-dom";
 import { updateState } from "../../burnoutReducer";
 import { useGoogleLogin } from '@react-oauth/google';
+import Navbar from "../Navbar"
 
 function SignIn(props) {
   const history = useHistory();
@@ -130,6 +131,7 @@ function SignIn(props) {
 	
   return (
     <ThemeProvider theme={defaultTheme}>
+      <Navbar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box

@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../Navbar';
 
 const defaultTheme = createTheme();
 
@@ -105,6 +106,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
+      <Navbar />
       <ToastContainer
       position="top-center"
       autoClose={5000}

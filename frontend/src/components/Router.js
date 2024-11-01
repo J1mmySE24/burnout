@@ -12,8 +12,8 @@ import PrivateRoute from "./PrivateRoute";
 import useToken from "./authentication/useToken";
 import FAQ from "./faq";
 import Resources from "./Resources";
-import Calender from "./calender"
-
+import Calender from "./calender";
+import LandingPage from "./Landing";
 
 const initialState = {
   loggedIn: false,
@@ -28,10 +28,12 @@ const initialState = {
 function Router() {
   const { getToken, token } = useToken();
   const [state, dispatch] = useReducer(burnoutReducer, initialState);
+
+  // Check token and update login state if not already logged in
   if (!state.loggedIn) {
-    let loggedInUserJWTtoken = getToken();
+    const loggedInUserJWTtoken = getToken();
     if (loggedInUserJWTtoken) {
-      let logInState = {
+      const logInState = {
         loggedIn: true,
         token: token,
       };
@@ -41,19 +43,22 @@ function Router() {
 
   return (
     <Switch>
+      {/* Authentication Routes */}
       <Route path="/signup">
         <SignUp />
       </Route>
       <Route path="/signin">
         <SignIn dispatch={dispatch} />
       </Route>
+
+      {/* Private Routes */}
       <PrivateRoute state={state} dispatch={dispatch} path="/profile">
         <Profile state={state} dispatch={dispatch} />
       </PrivateRoute>
       <PrivateRoute state={state} dispatch={dispatch} path="/faq">
         <FAQ state={state} dispatch={dispatch} />
       </PrivateRoute>
-        <PrivateRoute state={state} dispatch={dispatch} path="/calender">
+      <PrivateRoute state={state} dispatch={dispatch} path="/calender">
         <Calender state={state} dispatch={dispatch} />
       </PrivateRoute>
       <PrivateRoute state={state} dispatch={dispatch} path="/contactus">
@@ -68,10 +73,17 @@ function Router() {
       <PrivateRoute state={state} dispatch={dispatch} path="/events">
         <Events state={state} dispatch={dispatch} />
       </PrivateRoute>
-      <PrivateRoute state={state} dispatch={dispatch} path="/">
-        <Home state={state} dispatch={dispatch} />
-      </PrivateRoute>
 
+      {/* Root Route with Conditional Rendering */}
+      <Route exact path="/">
+        {state.loggedIn ? (
+          <PrivateRoute state={state} dispatch={dispatch}>
+            <Home state={state} dispatch={dispatch} />
+          </PrivateRoute>
+        ) : (
+          <LandingPage />
+        )}
+      </Route>
     </Switch>
   );
 }
