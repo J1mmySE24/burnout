@@ -1,15 +1,12 @@
-name: Run Tests On Push
+name: Run Tests in PR
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  issue_comment:
+    types: [created]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/build') }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Python 3.12.7
@@ -21,7 +18,6 @@ jobs:
         run: |
           pip install -r requirements.txt
           echo requirements installed
-        
       - name: Run tests
         working-directory: ./backend
         run: |
