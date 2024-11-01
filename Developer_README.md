@@ -54,11 +54,15 @@
 
 ## Table of Contents  
 
-- [Project Techstack:](#project-techstack)
-- <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/README.md#getting-started"> Get Started: Installation </a>
-- [Technical Overview:](#technical-overview)
-- [Third-Party Dependencies](#third-party-dependencies)
+- [Developer Documentation](#developer-documentation)
+  - [Table of Contents](#table-of-contents)
+- [Project TechStack](#project-techstack)
+- [Technical Overview](#technical-overview)
+- [Getting started](#getting-started)
+    - [Prerequisites](#prerequisites)
+  - [Third-Party Dependencies](#third-party-dependencies)
 - [What's new?](#whats-new)
+  - [Bug Fixes](#bug-fixes)
 - [Contributors](#contributors)
 - [Contribution](#contribution)
 - [License](#license)
@@ -185,21 +189,20 @@ We fixed many bugs, but here are the most notable ones...
  <center>
   <table>
     <tr>
-        <td align="center"><a href="https://github.com/aiyer786"><img src="https://avatars.githubusercontent.com/u/60314222?s=400&u=0984f88aeb3a9c30f4ec8145176134e626843fd5&v=4" width="100px;" alt=""/><br /><sub><b>Aditya Iyer</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/aditikilledar"><img src="https://avatars.githubusercontent.com/u/73051765?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Killedar</b></sub></a></td>
-    <td align="center"><a href="https://github.com/shashank-madan"><img src="https://avatars.githubusercontent.com/u/52149707?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Shashank Madan</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/srina1h"><img src="https://avatars.githubusercontent.com/u/47570142?v=4" width="100px;" alt=""/><br /><sub><b>Srinath Srinivasan</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/XingJinming-real"><img src="https://avatars.githubusercontent.com/u/64783524?v=4" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/krishapatel10"><img src="https://avatars.githubusercontent.com/u/99911043?v=4" width="100px;" alt=""/><br /><sub><b>Krisha Patel</b></sub></a></td>
+    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="https://avatars.githubusercontent.com/u/57234787?v=4" width="100px;" alt=""/><br /><sub><b>Shreyas Devarak</b></sub></a><br /></td>
     </tr>
   </table>
 </center>
 
   # Contribution
   
-  Please refer the [CONTRIBUTING.md](https://github.com/adi-kiran/burnout-healthgoalsapp/blob/main/CONTRIBUTING.md) file for instructions on how to contribute to our repository.
+  Please refer the [CONTRIBUTING.md](https://github.com/J1mmySE24/burnout/blob/main/CONTRIBUTING.md) file for instructions on how to contribute to our repository.
 
   # License
   
-  This project is licensed under the MIT License. Please refer to [LICENSE](https://github.com/adi-kiran/burnout-healthgoalsapp/blob/main/LICENSE) for more details.
+  This project is licensed under the MIT License. Please refer to [LICENSE](https://github.com/J1mmySE24/burnout/blob/main/LICENSE) for more details.
   
   
 

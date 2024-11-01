@@ -36,7 +36,7 @@ const ContactUs = (props) => {
           Fill out the form below to send us an email.
         </Typography>
         <Typography variant="h6" style={{ marginTop: '20px' }}>
-          Email: <Link href="contactus_burnout@​yahoo.com">contactus_burnout@​yahoo.com</Link>
+          Email: <Link href="team96.se@gmail.com">team96.se@gmail.com</Link>
         </Typography>
         <Typography variant="h6" color="text.secondary" style={{ marginTop: '20px' }}>
           We will respond to you as soon as we can!

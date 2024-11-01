@@ -10,110 +10,21 @@
     <a href="https://aditikilledar.github.io/burnout-proj3/index.html"><strong>Explore the API docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/Tutorials.md">View Demo</a>
+    <a href="https://github.com/J1mmySE24/burnout/blob/main/Tutorials.md">View Demo</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
+    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
+    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
     <br>
     <a href="https://youtu.be/bYTZT8vcICI">View Video</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/Project3Scores.md">Scores</a>
+    <a href="https://github.com/J1mmySE24/burnout/blob/main/Project2Scores.md">Scores</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/Developer_README.md">Developer Documentation</a>
+    <a href="https://github.com/J1mmySE24/burnout/blob/main/Developer_README.md">Developer Documentation</a>
   </p>
 </div>
 <br>
 
----
-
-We forked this repo from this [link](https://github.com/aditikilledar/burnout-proj3)
-
-### Team 96
-#### Members
-* Jinming Xing
-* Krisha Patel
-* Shreyas Devaraj
-
-https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438
-
-### Existing Features
-- **Comprehensive Tracking**: Monitor everything from your diet to calories burned in one place.
-- **Diverse Fitness Events**: Stay engaged with regularly updated fitness events to avoid routine monotony.
-- **Personalized Insights**: Receive data-driven feedback to better understand your body and habits.
-- **Community Support**: Connect with a like-minded community to share tips and stay motivated.
-- **Data Security**: Ensure your data remains private and secure.
-
-### Features to Add
-- **Generative AI-Based Fitness Plan**: Create customized fitness plans using generative AI.
-- **Chatbot Personal Assistant**: Provide a personal assistant chatbot for user guidance.
-- **Food Image Analysis**: Analyze pictures of food items to assess their health impact.
-- **Calendar Integration**: Connect with calendar apps to receive gym session reminders.
-- **Dockerized Repository & Hosting**: Dockerize the project repository and host it publicly.
-- **Fitness Buddies**: Integrate social media for connecting with fitness buddies.
-- **Activity Tracker Integration**: Sync with activity trackers for seamless monitoring.
-
-### Test Suite
-Based on the provided code snippets, here's an overview of the test suite in the project:
-
-1. Frontend Tests:
-   - Tests rendering of each of the components, as present in [frontend/src/](frontend/src/) - for Home, Profile, Events, My-Meals, FAQs, Contact-Us etc
-
-2. Backend Tests (`test_api.py`):
-   The `APITestCase` class contains multiple test methods covering various API endpoints and scenarios:
-
-   a. Authentication and Authorization:
-   - `test_register_success`: Tests successful user registration.
-   - `test_unauthorized_get_user_registered_events`: Tests unauthorized access to user's registered events.
-   - `test_unauthorized_enrolled_true`: Tests unauthorized access to enrollment status.
-   - `test_my_profile_unauthorized`: Tests unauthorized access to user profile.
-   - `test_usersEvents_unauthorized`: Tests unauthorized access to user's events.
-   - `test_foodCalorieMapping_unauthorized`: Tests unauthorized access to food calorie mapping.
-
-   b. Event Management:
-   - `test_get_events`: Tests fetching events.
-
-   c. User Data Access:
-   - `test_weekHistory_unauthorized`: Tests unauthorized access to week history.
-   - `test_caloriesBurned_unauthorized`: Tests unauthorized access to calories burned data.
-   - `test_goalsUpdate_unauthorized`: Tests unauthorized access to goals update.
-   - `test_profileUpdate_unauthorized`: Tests unauthorized access to profile update.
-   - `test_caloriesConsumed_unauthorized`: Tests unauthorized access to calories consumed data.
-
-The test suite covers the following aspects:
-
-1. Component Rendering: Ensures that key frontend components render without crashing.
-
-2. API Endpoint Security: Extensively tests unauthorized access to various API endpoints, ensuring that protected routes are secure.
-
-3. User Authentication: Tests the user registration process.
-
-4. Data Retrieval: Tests fetching of events and other user-specific data.
-
-5. User Actions: Tests various user actions like updating profile, goals, and accessing personal data.
-
-6. Error Handling: Implicitly tests error responses for unauthorized access attempts.
-
-While this test suite provides good coverage for authentication, authorization, and basic functionality, there are areas that could be expanded:
-
-1. Positive test cases for authorized access to protected routes.
-2. More comprehensive frontend testing, including user interactions and state management.
-3. Testing of data manipulation endpoints (e.g., creating meals, enrolling in events).
-4. Edge cases and error handling for valid but problematic inputs.
-5. Integration tests that cover the interaction between frontend and backend.
-
-Overall, the current test suite focuses heavily on security and unauthorized access, which is crucial, but could be expanded to cover more functional aspects of the application.
-
-
-### Screenshot of the running application
-
-#### Home page
-<img width='600' src="resources/index.png">
-
-#### Profile page
-<img width='600' src="resources/profile.png">
-
----
 [![codecov](https://codecov.io/gh/J1mmySE24/burnout/graph/badge.svg?token=nWtaSvxEU7)](https://codecov.io/gh/J1mmySE24/burnout)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/714758791.svg)](https://zenodo.org/doi/10.5281/zenodo.10208054)
@@ -139,6 +50,7 @@ Overall, the current test suite focuses heavily on security and unauthorized acc
 <img src="https://img.shields.io/github/discussions/aditikilledar/burnout-proj3" /></a> 
 <a href="https://img.shields.io/github/repo-size/aditikilledar/burnout-proj3" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/aditikilledar/burnout-proj3" /></a>
+---
 
 # Table of Contents  
 
@@ -158,6 +70,10 @@ Overall, the current test suite focuses heavily on security and unauthorized acc
 - [Project TechStack](#project-techstack)
 - [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
+- [What existed](#what-existed)
+    - [Existing Features](#existing-features)
+    - [Features to Add](#features-to-add)
+    - [Test Suite](#test-suite)
 - [What's new?](#whats-new)
 - [Bug Fixes](#bug-fixes)
 - [Future Scope](#future-scope)
@@ -259,7 +175,7 @@ Before you begin, make sure you have the following installed:
  Step 1: 
   Git Clone the Repository 
   
-    git clone https://github.com/aditikilledar/burnout-proj3
+    git clone https://github.com/J1mmySE24/burnout
 
 Step 2:
    Ensure mongodb is running and execute the below to populate the tables:
@@ -288,55 +204,119 @@ Step 2:
  Step 5:
     Open the URL in your browser:  
       http://127.0.0.1:3000
+
+# What existed
+As version i-1, forked this repo from this [link](https://github.com/aditikilledar/burnout-proj3)
+
+https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438
+
+### Existing Features
+- **Comprehensive Tracking**: Monitor everything from your diet to calories burned in one place.
+- **Diverse Fitness Events**: Stay engaged with regularly updated fitness events to avoid routine monotony.
+- **Personalized Insights**: Receive data-driven feedback to better understand your body and habits.
+- **Community Support**: Connect with a like-minded community to share tips and stay motivated.
+- **Data Security**: Ensure your data remains private and secure.
+
+### Features to Add
+- **Generative AI-Based Fitness Plan**: Create customized fitness plans using generative AI.
+- **Chatbot Personal Assistant**: Provide a personal assistant chatbot for user guidance.
+- **Food Image Analysis**: Analyze pictures of food items to assess their health impact.
+- **Calendar Integration**: Connect with calendar apps to receive gym session reminders.
+- **Dockerized Repository & Hosting**: Dockerize the project repository and host it publicly.
+- **Fitness Buddies**: Integrate social media for connecting with fitness buddies.
+- **Activity Tracker Integration**: Sync with activity trackers for seamless monitoring.
+
+### Test Suite
+Based on the provided code snippets, here's an overview of the test suite in the project:
+
+1. Frontend Tests:
+   - Tests rendering of each of the components, as present in [frontend/src/](frontend/src/) - for Home, Profile, Events, My-Meals, FAQs, Contact-Us etc
+
+2. Backend Tests (`test_api.py`):
+   The `APITestCase` class contains multiple test methods covering various API endpoints and scenarios:
+
+   a. Authentication and Authorization:
+   - `test_register_success`: Tests successful user registration.
+   - `test_unauthorized_get_user_registered_events`: Tests unauthorized access to user's registered events.
+   - `test_unauthorized_enrolled_true`: Tests unauthorized access to enrollment status.
+   - `test_my_profile_unauthorized`: Tests unauthorized access to user profile.
+   - `test_usersEvents_unauthorized`: Tests unauthorized access to user's events.
+   - `test_foodCalorieMapping_unauthorized`: Tests unauthorized access to food calorie mapping.
+
+   b. Event Management:
+   - `test_get_events`: Tests fetching events.
+
+   c. User Data Access:
+   - `test_weekHistory_unauthorized`: Tests unauthorized access to week history.
+   - `test_caloriesBurned_unauthorized`: Tests unauthorized access to calories burned data.
+   - `test_goalsUpdate_unauthorized`: Tests unauthorized access to goals update.
+   - `test_profileUpdate_unauthorized`: Tests unauthorized access to profile update.
+   - `test_caloriesConsumed_unauthorized`: Tests unauthorized access to calories consumed data.
+
+The test suite covers the following aspects:
+
+1. Component Rendering: Ensures that key frontend components render without crashing.
+
+2. API Endpoint Security: Extensively tests unauthorized access to various API endpoints, ensuring that protected routes are secure.
+
+3. User Authentication: Tests the user registration process.
+
+4. Data Retrieval: Tests fetching of events and other user-specific data.
+
+5. User Actions: Tests various user actions like updating profile, goals, and accessing personal data.
+
+6. Error Handling: Implicitly tests error responses for unauthorized access attempts.
+
+While this test suite provides good coverage for authentication, authorization, and basic functionality, there are areas that could be expanded:
+
+1. Positive test cases for authorized access to protected routes.
+2. More comprehensive frontend testing, including user interactions and state management.
+3. Testing of data manipulation endpoints (e.g., creating meals, enrolling in events).
+4. Edge cases and error handling for valid but problematic inputs.
+5. Integration tests that cover the interaction between frontend and backend.
+
+Overall, the current test suite focuses heavily on security and unauthorized access, which is crucial, but could be expanded to cover more functional aspects of the application.
+
+---
       
 # What's new?
 
 This version enhanced and built on the previous version, making it 10x more interesting and easier to use!
 Here's what we added in this release.
 
-1. Ability to add custom foods and track their calories.
-2. Fully customizable meal creation.
-3. An intuitive and searchable dropdown.
-4. BMI Calculation for your personal profile.
-5. Intelligent automatic calorie burn calculation.
-6. Enhanced UI.
-7. Randomized Exercise of the Day.
-8. Google Sign-in is now an option!
-9. Better progress tracking on the landing page.
+1. New landing page, making it appealing.
+2. A fitness companion as a chatbot.
+3. Generating your fitness and diet plan based on the user
+4. Calendar app, to schedule gym sessions 
+5. Enhanced UI.
+6. Resources page to keep yourself updated
+7. Additional FAQs giving you all the insights. 
+8. MongoDB is now on the cloud, with Atlas!
 
 # Bug Fixes
 We fixed many bugs, but here are the most notable ones...
 
-1. Sign up / Sign in issues, especially when an existing user tries to sign up again.
+1. Sign up / Sign in issues, not adding reason for not being able to sign in.
 2. The proxy in the config files were wrong, making it difficult to run the website. Proxy issues were fixed.
 3. Testcases were updated and fixed.
-4. Event were not un-enrollable. Now events can be enrolled and unenrolled.
-5. Exercise of the day was static, which defeats the purpose. Fixed, it is now random.
-6. Linechart on the landing page was incorrect. Fixed.
 
 # Future Scope
 The application can be extended with features like:
 
 1. Counting macros.
-2. Adding a chat bot/assistant.
-3. Linking with an activity tracker like fitbit.
-4. Provides standard diet plans.
-5. Dockerize the application.
-6. Taking the user's medical history into account.
-7. Finding fitness buddies. (Integrating social media)
+2. Food image analysis.
+3. Integration with activity tracker like fitbit.
+4. Dockerize the application.
+5. Hosting the application
    
    # Contributors
    
-<center>
+ <center>
   <table>
     <tr>
-    <td align="center"><a href="https://github.com/XingJinming-real"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/krishapatel10"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>krisha patel</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Shreyas Devaraj</b></sub></a><br /></td>
-        <td align="center"><a href="https://github.com/aiyer786"><img src="https://avatars.githubusercontent.com/u/60314222?s=400&u=0984f88aeb3a9c30f4ec8145176134e626843fd5&v=4" width="100px;" alt=""/><br /><sub><b>Aditya Iyer</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/aditikilledar"><img src="https://avatars.githubusercontent.com/u/73051765?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Killedar</b></sub></a></td>
-    <td align="center"><a href="https://github.com/shashank-madan"><img src="https://avatars.githubusercontent.com/u/52149707?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Shashank Madan</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/srina1h"><img src="https://avatars.githubusercontent.com/u/47570142?v=4" width="100px;" alt=""/><br /><sub><b>Srinath Srinivasan</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/XingJinming-real"><img src="https://avatars.githubusercontent.com/u/64783524?v=4" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/krishapatel10"><img src="https://avatars.githubusercontent.com/u/99911043?v=4" width="100px;" alt=""/><br /><sub><b>Krisha Patel</b></sub></a></td>
+    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="https://avatars.githubusercontent.com/u/57234787?v=4" width="100px;" alt=""/><br /><sub><b>Shreyas Devarak</b></sub></a><br /></td>
     </tr>
   </table>
 </center>
