@@ -28,8 +28,7 @@ function SignIn(props) {
   const defaultTheme = createTheme();
   const [loginForm, setloginForm] = useState({ email: "", password: "" });
   const { saveToken } = useToken();
-  const [user, setUser] = useState([]);
-  const [profile, setProfile] = useState([]);
+  const [user, setUser] = useState([]); // state for Google login
 
   // Handle regular login
   function logMeIn(event) {
@@ -89,7 +88,7 @@ function SignIn(props) {
           },
         })
         .then((res) => {
-          setProfile(res.data);
+          // Directly use res.data for the Google login API call
           axios({
             method: "POST",
             url: "/google-login",
