@@ -148,6 +148,38 @@ function Header(props) {
               </MenuItem>
             </Menu>
           </Box>
+            {/* Twitter Button */}
+            <IconButton
+                color="inherit"
+                component="a"
+                href="https://twitter.com"
+                target="_blank"
+                // rel="noopener noreferrer"
+            >
+                Twitter
+            </IconButton>
+
+            {/* Facebook Button */}
+            <IconButton
+                color="inherit"
+                component="a"
+                href="https://facebook.com"
+                target="_blank"
+                // rel="noopener noreferrer"
+            >
+                Facebook
+            </IconButton>
+
+            {/* YouTube Button */}
+            <IconButton
+                color="inherit"
+                component="a"
+                href="https://youtube.com"
+                target="_blank"
+                // rel="noopener noreferrer"
+            >
+                Youtube
+            </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
