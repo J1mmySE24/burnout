@@ -615,6 +615,7 @@ const handleUnenroll = (eventName) => {
               })}
             </CardContent>
           </Card>
+          
         </Box>
       </Container>
       <Footer />
