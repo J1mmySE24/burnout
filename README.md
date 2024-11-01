@@ -27,30 +27,29 @@
 
 [![codecov](https://codecov.io/gh/J1mmySE24/burnout/graph/badge.svg?token=nWtaSvxEU7)](https://codecov.io/gh/J1mmySE24/burnout)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![DOI](https://zenodo.org/badge/714758791.svg)](https://zenodo.org/doi/10.5281/zenodo.10208054)
+[![DOI](https://zenodo.org/badge/865633530.svg)](https://doi.org/10.5281/zenodo.14027128)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-![Build Status](https://github.com/aditikilledar/burnout-proj3/actions/workflows/build_repo.yml/badge.svg)
+[![Build repo](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml)
+[![Lint Python](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-![last commit](https://img.shields.io/github/last-commit/aditikilledar/burnout-proj3)
-![github workflow](https://github.com/aditikilledar/burnout-proj3/actions/workflows/unit_test.yml/badge.svg)
-![github workflow](https://github.com/aditikilledar/burnout-proj3/actions/workflows/style_checker.yml/badge.svg)
-![github workflow](https://github.com/aditikilledar/burnout-proj3/actions/workflows/syntax_checker.yml/badge.svg)
-[![codecov](https://codecov.io/gh/aditikilledar/burnout-proj3/graph/badge.svg?token=8DO6VMEZ7J)](https://codecov.io/gh/aditikilledar/burnout-proj3)
-<a href="https://github.com/aditikilledar/burnout-proj3/fork" target="blank">
-<img src="https://img.shields.io/github/forks/aditikilledar/burnout-proj3?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
-<a href="https://github.com/aditikilledar/burnout-proj3/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/aditikilledar/burnout-proj3?style=flat-square" alt="burnout-healthgoalsapp stars"/>
-<a href="https://github.com/aditikilledar/burnout-proj3/issues" target="blank"> <img src="https://img.shields.io/github/issues-closed/aditikilledar/burnout-proj3" alt="burnout-healthgoalsapp issues closed"/>
+![GitHub last commit](https://img.shields.io/github/last-commit/J1mmySE24/burnout)
+[![Running Code Coverage](https://github.com/J1mmySE24/burnout/actions/workflows/code_cov.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/code_cov.yml)
+[![Run Tests On Push](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml)
+[![Python application](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml)
+[![Close as a feature](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml)
+<a href="https://github.com/J1mmySE24/burnout/fork" target="blank">
+<img src="https://img.shields.io/github/forks/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
+<img src="https://img.shields.io/github/stars/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp stars"/>
+<a href="https://github.com/J1mmySE24/burnout/issues" target="blank"> <img src="https://img.shields.io/github/issues-closed/J1mmySE24/burnout" alt="burnout-healthgoalsapp issues closed"/>
 </a>
-<a href="https://github.com/aditikilledar/burnout-proj3/graphs/contributors" alt="Contributors">
-<img src="https://img.shields.io/github/contributors/aditikilledar/burnout-proj3" /></a>
-<a href="https://github.com/aditikilledar/burnout-proj3/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/aditikilledar/burnout-proj3" /></a> 
-<a href="https://github.com/aditikilledar/burnout-proj3/discussions" alt="discussion">
-<img src="https://img.shields.io/github/discussions/aditikilledar/burnout-proj3" /></a> 
-<a href="https://img.shields.io/github/repo-size/aditikilledar/burnout-proj3" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/aditikilledar/burnout-proj3" /></a>
----
+<a href="https://github.com/J1mmySE24/burnout/graphs/contributors" alt="Contributors">
+<img src="https://img.shields.io/github/contributors/J1mmySE24/burnout" /></a>
+<a href="https://github.com/J1mmySE24/burnout/graphs/commit-activity" alt="commit activity">
+<img src="https://img.shields.io/github/commit-activity/w/J1mmySE24/burnout" /></a> 
+<a href="https://github.com/J1mmySE24/burnout/discussions" alt="discussion">
+<img src="https://img.shields.io/github/discussions/J1mmySE24/burnout" /></a> 
+<a href="https://img.shields.io/github/repo-size/J1mmySE24/burnout" alt="repo size">
+<img src="https://img.shields.io/github/repo-size/J1mmySE24/burnout" /></a>
 
 # Table of Contents  
 
