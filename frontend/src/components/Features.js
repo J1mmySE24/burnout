@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // Import your images here
-import feature_1 from './assets/img/feature_1.jpg';
+// import feature_1 from './assets/img/feature_1.jpg';
 import feature_2 from './assets/img/feature_2.jpg';
 import feature_3 from './assets/img/feature_3.jpg';
 import feature_4 from './assets/img/feature_4.jpg';

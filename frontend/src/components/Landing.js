@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Call, Image, Main, About } from './land';
+import { Container, Call, Image, Main } from './land';
 import Navbar from './Navbar';
 
 import landingImage from './assets/img/landing.jpg';
