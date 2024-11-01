@@ -1,38 +1,39 @@
-import * as React from "react";
-import { useState, useEffect } from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+import React, { useState, useEffect } from "react";
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  FormControlLabel,
+  Checkbox,
+  Link,
+  Grid,
+  Box,
+  Typography,
+  Container,
+} from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import axios from "axios";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import useToken from "./useToken";
+import { useGoogleLogin } from "@react-oauth/google";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify"; // Import react-toastify
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for react-toastify
+import Navbar from "../Navbar";
+import useToken from "./useToken";
 import { updateState } from "../../burnoutReducer";
-import { useGoogleLogin } from '@react-oauth/google';
-import Navbar from "../Navbar"
 
 function SignIn(props) {
   const history = useHistory();
   const defaultTheme = createTheme();
-
-  const [loginForm, setloginForm] = useState({
-    email: "",
-    password: "",
-  });
+  const [loginForm, setloginForm] = useState({ email: "", password: "" });
   const { saveToken } = useToken();
+  const [user, setUser] = useState([]);
+  const [profile, setProfile] = useState([]);
 
+  // Handle regular login
   function logMeIn(event) {
-    console.log(loginForm.email);
-    console.log(loginForm.password);
+    event.preventDefault();
 
     axios({
       method: "POST",
@@ -43,7 +44,6 @@ function SignIn(props) {
       },
     })
       .then((response) => {
-        console.log(response.data.message);
         let logInState = {
           loggedIn: true,
           token: response.data.access_token,
@@ -54,81 +54,70 @@ function SignIn(props) {
       })
       .catch((error) => {
         if (error.response) {
-          console.log(error.response);
-          console.log(error.response.status);
-          console.log(error.response.headers);
+          console.error("Login error:", error.response);
+          // Show a toast message for invalid credentials
+          if (error.response.data.message === "Invalid email or password") {
+            toast.error("Invalid email or password");
+          } else {
+            toast.error("An error occurred. Please try again.");
+          }
         }
       });
 
-    setloginForm({
-      email: "",
-      password: "",
-    });
-
-    event.preventDefault();
+    setloginForm({ email: "", password: "" });
   }
 
+  // Handle changes to login form fields
   function handleChange(event) {
-    const { value, name } = event.target;
-    setloginForm((prevNote) => ({
-      ...prevNote,
-      [name]: value,
-    }));
+    const { name, value } = event.target;
+    setloginForm((prevForm) => ({ ...prevForm, [name]: value }));
   }
 
-  const [ user, setUser ] = useState([]);
-  const [ profile, setProfile ] = useState([]);
-
+  // Handle Google login
   const login = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log('Login Failed:', error)
-    });
+    onSuccess: (codeResponse) => setUser(codeResponse),
+    onError: (error) => console.log("Login Failed:", error),
+  });
 
-	useEffect(
-        () => {
-            if (user) {
-                axios
-                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-                        headers: {
-                            Authorization: `Bearer ${user.access_token}`,
-                            Accept: 'application/json'
-                        }
-                    })
-                    .then((res) => {
-                        setProfile(res.data);
-						axios({
-							method: "POST",
-							url: "/google-login",
-							data: {
-							  email: profile.email,
-                first_name: profile.given_name,
-                last_name: profile.family_name
-							},
-						  })
-							.then((response) => {
-							  console.log(response.data.message);
-							  let logInState = {
-								loggedIn: true,
-								token: response.data.access_token,
-							  };
-							  props.dispatch(updateState(logInState));
-							  saveToken(response.data.access_token);
-							  history.push("/");
-							})
-							.catch((error) => {
-							  if (error.response) {
-								console.log(error.response);
-								console.log(error.response.status);
-								console.log(error.response.headers);
-							  }
-							});
-                    })
-                    .catch((err) => console.log(err));
-            }
-        },
-        [user, profile, props, saveToken, history]
-    );
-	
+  useEffect(() => {
+    if (user) {
+      axios
+        .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+          headers: {
+            Authorization: `Bearer ${user.access_token}`,
+            Accept: "application/json",
+          },
+        })
+        .then((res) => {
+          setProfile(res.data);
+          axios({
+            method: "POST",
+            url: "/google-login",
+            data: {
+              email: res.data.email,
+              first_name: res.data.given_name,
+              last_name: res.data.family_name,
+            },
+          })
+            .then((response) => {
+              let logInState = {
+                loggedIn: true,
+                token: response.data.access_token,
+              };
+              props.dispatch(updateState(logInState));
+              saveToken(response.data.access_token);
+              history.push("/");
+            })
+            .catch((error) => {
+              if (error.response) {
+                toast.error("Google login failed. Please try again.");
+              }
+            });
+        })
+        .catch((err) => console.error("Error fetching Google profile:", err));
+    }
+  }, [user, props, saveToken, history]);
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Navbar />
@@ -177,12 +166,7 @@ function SignIn(props) {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
+            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
               Sign In
             </Button>
             <Grid container>
@@ -198,16 +182,12 @@ function SignIn(props) {
               </Grid>
             </Grid>
           </Box>
-		  <Button
-              onClick={login}
-              fullWidth
-              variant="outlined"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In With Google
-            </Button>
+          <Button onClick={login} fullWidth variant="outlined" sx={{ mt: 3, mb: 2 }}>
+            Sign In With Google
+          </Button>
         </Box>
-        
+        {/* ToastContainer for showing toasts */}
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       </Container>
     </ThemeProvider>
   );
