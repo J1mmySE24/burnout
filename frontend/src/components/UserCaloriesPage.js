@@ -46,7 +46,6 @@ import {
 import axios from "axios";
 import Footer from "./Footer";
 import { saveAs } from "file-saver"; // To download files
-import { createEvents } from "ics";
 
 const containsText = (text, searchText) =>
   text.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
