@@ -64,84 +64,7 @@
 
 <!-- https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438 -->
 
----
-### Existing Features
-- **Comprehensive Tracking**: Monitor everything from your diet to calories burned in one place.
-- **Diverse Fitness Events**: Stay engaged with regularly updated fitness events to avoid routine monotony.
-- **Personalized Insights**: Receive data-driven feedback to better understand your body and habits.
-- **Community Support**: Connect with a like-minded community to share tips and stay motivated.
-- **Data Security**: Ensure your data remains private and secure.
 
-### Features Added
-- **Generative AI-Based Fitness Plan**: Create customized fitness plans using generative AI.
-- **Chatbot Personal Assistant**: Provide a personal assistant chatbot for user guidance.
-- **Food Image Analysis**: Analyze pictures of food items to assess their health impact.
-- **Calendar Integration**: Connect with calendar apps to receive gym session reminders.
-- **Dockerized Repository & Hosting**: Dockerize the project repository and host it publicly.
-- **Fitness Buddies**: Integrate social media for connecting with fitness buddies.
-- **Activity Tracker Integration**: Sync with activity trackers for seamless monitoring.
-
-### Test Suite
-Based on the provided code snippets, here's an overview of the test suite in the project:
-
-1. Frontend Tests:
-   - Tests rendering of each of the components, as present in [frontend/src/](frontend/src/) - for Home, Profile, Events, My-Meals, FAQs, Contact-Us etc
-
-2. Backend Tests (`test_api.py`):
-   The `APITestCase` class contains multiple test methods covering various API endpoints and scenarios:
-
-   a. Authentication and Authorization:
-   - `test_register_success`: Tests successful user registration.
-   - `test_unauthorized_get_user_registered_events`: Tests unauthorized access to user's registered events.
-   - `test_unauthorized_enrolled_true`: Tests unauthorized access to enrollment status.
-   - `test_my_profile_unauthorized`: Tests unauthorized access to user profile.
-   - `test_usersEvents_unauthorized`: Tests unauthorized access to user's events.
-   - `test_foodCalorieMapping_unauthorized`: Tests unauthorized access to food calorie mapping.
-
-   b. Event Management:
-   - `test_get_events`: Tests fetching events.
-
-   c. User Data Access:
-   - `test_weekHistory_unauthorized`: Tests unauthorized access to week history.
-   - `test_caloriesBurned_unauthorized`: Tests unauthorized access to calories burned data.
-   - `test_goalsUpdate_unauthorized`: Tests unauthorized access to goals update.
-   - `test_profileUpdate_unauthorized`: Tests unauthorized access to profile update.
-   - `test_caloriesConsumed_unauthorized`: Tests unauthorized access to calories consumed data.
-
-The test suite covers the following aspects:
-
-1. Component Rendering: Ensures that key frontend components render without crashing.
-
-2. API Endpoint Security: Extensively tests unauthorized access to various API endpoints, ensuring that protected routes are secure.
-
-3. User Authentication: Tests the user registration process.
-
-4. Data Retrieval: Tests fetching of events and other user-specific data.
-
-5. User Actions: Tests various user actions like updating profile, goals, and accessing personal data.
-
-6. Error Handling: Implicitly tests error responses for unauthorized access attempts.
-
-While this test suite provides good coverage for authentication, authorization, and basic functionality, there are areas that could be expanded:
-
-1. Positive test cases for authorized access to protected routes.
-2. More comprehensive frontend testing, including user interactions and state management.
-3. Testing of data manipulation endpoints (e.g., creating meals, enrolling in events).
-4. Edge cases and error handling for valid but problematic inputs.
-5. Integration tests that cover the interaction between frontend and backend.
-
-Overall, the current test suite focuses heavily on security and unauthorized access, which is crucial, but could be expanded to cover more functional aspects of the application.
-
-
-### Screenshot of the running application
-
-#### Home page
-<img width='600' src="resources/index.png">
-
-#### Profile page
-<img width='600' src="resources/profile.png">
-
----
 # Table of Contents  
 
 - [Table of Contents](#table-of-contents)
@@ -149,21 +72,28 @@ Overall, the current test suite focuses heavily on security and unauthorized acc
 - [**💡 Why Choose Burnout?**](#-why-choose-burnout)
 - [Walkthrough](#walkthrough)
 - [Application Screenshots](#application-screenshots)
+  - [Landing](#landing)
   - [Sign-In](#sign-in)
   - [Homepage](#homepage)
   - [Profile](#profile)
   - [Events](#events)
   - [My-Meals](#my-meals)
-  - [FAQs](#faqs)
+  - [Calendar](#calendar)
+  - [Resources](#resources)
+  - [FAQs with Chatbot](#faqs-with-chatbot)
   - [Contact-Us](#contact-us)
     - [:memo: **Note:** Additional screenshots and a mini tutorials can be found here:Tutorials.md](#memo-note-additional-screenshots-and-a-mini-tutorials-can-be-found-heretutorialsmd)
 - [Project TechStack](#project-techstack)
 - [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
+      - [Note](#note)
 - [What existed](#what-existed)
-    - [Existing Features](#existing-features-1)
+    - [Existing Features](#existing-features)
     - [Features to Add](#features-to-add)
-    - [Test Suite](#test-suite-1)
+    - [Test Suite](#test-suite)
+    - [Screenshot of the running application](#screenshot-of-the-running-application)
+      - [Home page](#home-page)
+      - [Profile page](#profile-page)
 - [What's new?](#whats-new)
 - [Bug Fixes](#bug-fixes)
 - [Future Scope](#future-scope)
@@ -210,38 +140,50 @@ In today's fast-paced world, maintaining health is a challenge. But with the rig
 
 # Walkthrough
 
-Link to the implementation video of the BurnOut application: [Video](https://www.youtube.com/watch?v=Ozbn9nNFr1Y)
+Link to the implementation video of the BurnOut application: [Video](https://drive.google.com/file/d/1UlaIKC_3sxjySAmIVvCIVoci0tKdaqf4/view?usp=drive_link)
 
 
 # Application Screenshots
+
+## Landing
  
+ <img width='600' src="./resources/landing.png">
+
  ## Sign-In
  
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/acbc01b2-56ef-4d3e-9981-77b427f970ef">
+ <img width='600' src="./resources/signin.png">
 
  ## Homepage
  
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/24195e37-8338-4126-b277-545eb735f95a">
+<img width='600' src="./resources/home.png">
 
  ## Profile
  
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/89da70a0-98f8-493a-b5ef-90012f9049e4">
+<img width='600' src="./resources/user.png">
 
  ## Events
 
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/7f73bd04-dbc6-42bb-a39a-36c6650f02fa">
+<img width='600' src="./resources/events.png">
 
  ## My-Meals
 
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/825acdd9-db7f-40a4-bd8a-52d8fd60584f">
+<img width='600' src="./resources/meal.png">
 
- ## FAQs
+## Calendar
 
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/0eb4e4cb-534d-40cd-b3c0-221b9dbf0e88">
+<img width='600' src="./resources/calendar.png">
+
+## Resources 
+
+<img width='600' src="./resources/resource.png">
+
+ ## FAQs with Chatbot 
+
+<img width='600' src="./resources/faq.png">
 
  ## Contact-Us
 
-<img width='600' src="https://github.com/aditikilledar/burnout-proj3/assets/60314222/e8d99dae-118e-4549-9867-7729e328ca9d">
+<img width='600' src="./resources/contact.png">
 
 ### :memo: **Note:** Additional screenshots and a mini tutorials can be found here:[Tutorials.md](https://github.com/aditikilledar/burnout-proj3/blob/main/Tutorials.md)
 
@@ -294,6 +236,11 @@ Step 2:
  Step 5:
     Open the URL in your browser:  
       http://127.0.0.1:3000
+
+#### Note
+- Additionally, to utilize the chatbot, you need to have [Ollama](https://ollama.com/library/llama3.2) (with llama 3.2 Model) running locally on your machine. 
+- To generate the fitness plan, fetch an API token from Mistral AI
+- To fetch the news on resources page, fetch an API token from Newsapi
 
 # What existed
 As version i-1, forked this repo from this [link](https://github.com/aditikilledar/burnout-proj3)
@@ -366,6 +313,14 @@ While this test suite provides good coverage for authentication, authorization, 
 5. Integration tests that cover the interaction between frontend and backend.
 
 Overall, the current test suite focuses heavily on security and unauthorized access, which is crucial, but could be expanded to cover more functional aspects of the application.
+
+### Screenshot of the running application
+
+#### Home page
+<img width='600' src="resources/index.png">
+
+#### Profile page
+<img width='600' src="resources/profile.png">
 
 ---
       
