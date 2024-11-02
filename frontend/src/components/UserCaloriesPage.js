@@ -45,6 +45,8 @@ import {
 } from "recharts";
 import axios from "axios";
 import Footer from "./Footer";
+import { saveAs } from "file-saver"; // To download files
+import { createEvents } from "ics";
 
 const containsText = (text, searchText) =>
   text.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
@@ -241,8 +243,8 @@ function UserCaloriesPage(props) {
         }
       });
   };
-  console.log(todayCaloriesBurned)
-  console.log(todayCaloriesConsumed)
+  // console.log(todayCaloriesBurned)
+  // console.log(todayCaloriesConsumed)
 
   const history = useHistory();
 
@@ -273,6 +275,29 @@ const handleUnenroll = (eventName) => {
     console.error("An error occurred while unenrolling: ", error);
   });
 };
+
+const handleDownload = () => {
+  // Define the header and footer for the .ics file
+  const header = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//YourApp//EN\n`;
+  const footer = `END:VCALENDAR`;
+
+  // Map events to .ics VEVENT format
+  const eventsContent = events.map((event) => {
+    const [month, day, year] = event.date.split("/").map(Number); // MM/DD/YYYY format
+    const formattedDate = `${year}${String(month).padStart(2, "0")}${String(day).padStart(2, "0")}`;
+
+    return `BEGIN:VEVENT\nSUMMARY:${event.eventName}\nDTSTART;VALUE=DATE:${formattedDate}\nDTEND;VALUE=DATE:${formattedDate}\nEND:VEVENT`;
+  }).join("\n");
+
+  // Combine all parts into full .ics content
+  const icsContent = `${header}${eventsContent}\n${footer}`;
+
+  // Create a blob and trigger download
+  const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+  saveAs(blob, "events.ics");
+};
+
+
 
   return (
     <>
@@ -484,6 +509,11 @@ const handleUnenroll = (eventName) => {
                   );
                 })}
               </List>
+              {events && events.length > 0 && (
+        <Button variant="contained" style={{ backgroundColor: 'orange' }} onClick={handleDownload}>
+          Download .ics
+        </Button>
+      )}
             </CardContent>
           </Card>
           <Card sx={{ gridArea: "week" }} elevation={5}>
